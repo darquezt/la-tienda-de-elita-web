@@ -46,7 +46,7 @@ class TemplateWrapper extends Component {
         <div className="modal__container">
           <div className="modal__logo">
             <img
-              src={data.datoCmsSite.theme.logo.url}
+              src={data.datoCmsSite.globalSeo.fallbackSeo.image.url}
               alt={data.datoCmsSite.globalSeo.siteName}
             />
           </div>
@@ -84,10 +84,10 @@ class TemplateWrapper extends Component {
           datoCmsSite {
             globalSeo {
               siteName
-            }
-            theme {
-              logo {
-                url
+              fallbackSeo {
+                image {
+                  url
+                }
               }
             }
             faviconMetaTags {
@@ -119,7 +119,7 @@ class TemplateWrapper extends Component {
         const logo = (
           <h6 className="sidebar__title">
             <Link to="/">
-              <img src={data.datoCmsSite.theme.logo.url} alt={data.datoCmsSite.globalSeo.siteName} />
+              <img src={data.datoCmsSite.globalSeo.fallbackSeo.image.url} alt={data.datoCmsSite.globalSeo.siteName} />
             </Link>
           </h6>
         )
